@@ -1,0 +1,534 @@
+/* General Styling */
+* {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #282828;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas:
+        'topbar topbar'
+        'sidebar maincontent'
+        'bottombar bottombar';
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Top Bar Styling */
+.topbar {
+    grid-area: topbar;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    /* background-color: #1f1f1f; */
+    border-bottom: 1px solid #282828;
+}
+
+.toplogo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+
+}
+
+.slogo {
+    border: none;
+}
+
+.toplogo img {
+    height: 2rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.topcenter {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.topcenter button {
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.topcenter img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.search {
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+.search input {
+    width: 400px;
+    height: 2.5rem;
+    padding: 0 1rem 0 2.5rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+
+.signin button,
+.login button {
+    background-color: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.login button:hover {
+    transform: scale(1.1);
+}
+
+.signin button:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.login button {
+    background-color: #fff;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #181818;
+    padding: 1rem;
+    border-right: 1px solid #282828;
+}
+
+.library {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.options {
+    background-color: #181818;
+
+}
+.lib-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #181818;
+
+}
+
+.lib-options img:hover {
+    opacity: 1;
+}
+
+.lib-options img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    opacity: 0.6;
+}
+
+.lib-options a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.lib-options a:hover {
+    opacity: 1;
+}
+
+.lib-options i {
+    font-size: 1.5rem;
+    color: #b3b3b3;
+    cursor: pointer;
+    margin-left: auto;
+    /* Optional: makes sure the icon is pushed to the right */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    opacity: 0.6;
+}
+
+.lib-options i:hover {
+    opacity: 1;
+}
+
+
+/* Bottom Bar Styling */
+.bottombar {
+    grid-area: bottombar;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #282828;
+}
+
+.bottombar p {
+    color: #b3b3b3;
+}
+
+.box {
+    background-color: #232323;
+    /* Dark background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    /* text-align: center; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+    margin-bottom: 1rem;
+}
+
+.box1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    background-color: #232323;
+}
+
+.box2 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+    background-color: #232323;
+}
+
+.badge {
+    background-color: #fff;
+    color: #000;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.badge:hover {
+    background-color: #ccc;
+    /* Slightly darker shade */
+    transform: scale(1.1);
+    /* Enlarge on hover */
+}
+
+/* Main Content Styling */
+.maincontent {
+    padding: 0px 24px;
+    height: 100%;
+    width: 100%;
+    background-color: #282828;
+    overflow-y: scroll;
+}
+
+/* Webkit scrollbar customization */
+.maincontent::-webkit-scrollbar {
+    width: 15px;
+    height: 6px;
+}
+
+.maincontent::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.maincontent::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.maincontent::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+}
+
+.cards2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+    background-color: #282828;
+}
+
+.card-container2 {
+    width: 167px;
+    height: 243;
+    padding: 10px 10px;
+    background-color: transparent;
+}
+
+.card-container2 img {
+    background-color: transparent;
+    width: 144px;
+    height: 144px;
+
+}
+
+.card-container {
+    width: 167px;
+    height: 243;
+    padding: 10px 10px;
+    background-color: transparent;
+}
+
+.card-container:hover {
+    background-color: #1f1f1f;
+}
+
+.card-container2:hover {
+    background-color: #1f1f1f;
+}
+
+.cards,
+h2 {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.con-tit {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.con-tit h2 {
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.con-tit a {
+    background-color: transparent;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    align-self: center;
+}
+
+.con-tit a:hover {
+    text-decoration: underline;
+}
+
+.card-container img {
+    background-color: transparent;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+}
+
+.text-contain h6 {
+    background-color: #282828;
+    /* width: 100%; */
+    font-size: 1rem;
+    padding: 5px 5px;
+}
+
+.text-contain p {
+    background-color: #282828;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px;
+}
+
+/* .text-contain h6:hover{
+    background-color: red;
+}
+.text-contain p:hover{
+    background-color: red;
+} */
+.card-container:hover .text-contain h6,
+.card-container:hover .text-contain p {
+    background-color: #1f1f1f;
+    /* Change text background on hover */
+    color: white;
+    /* Change text color on hover */
+}
+
+.card-container2:hover .text-contain h6,
+.card-container2:hover .text-contain p {
+    background-color: #1f1f1f;
+    /* Change text background on hover */
+    color: white;
+    /* Change text color on hover */
+}
+
+.knowmore {
+    margin: 4rem 0;
+    display: flex;
+    
+    justify-content: space-around;
+    background-color: #282828;
+}
+
+.items {
+    background-color: #282828;
+}
+
+.items a {
+    text-decoration: none;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.items p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.items li {
+    margin: 5px 0px;
+    padding: 0px 0px 8px;
+    background-color: transparent;
+
+}
+
+.items a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.items ul {
+    list-style: none;
+}
+
+.knowmore {
+    margin-top: 4rem;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    background-color: #282828;
+}
+
+.items {
+    background-color: #282828;
+}
+
+.items a {
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.items p {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #282828;
+}
+
+.items li {
+    margin: 5px 0px;
+    padding: 0px 0px 8px;
+
+}
+
+.items a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.items ul {
+    list-style: none;
+    background-color: #282828;
+}
+
+.s-m {
+    background-color: #282828;
+}
+
+.s-m i {
+    padding: 0px 16px 0px 0px;
+    font-size: 20px;
+    background-color: #282828;
+    cursor: pointer;
+}
+
+.s-m i:hover {
+    font-size: 25px;
+    background-color: #282828;
+}
+
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #181818;
+}
+
+.foot span {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 5px 10px 12px 10px;
+}
+
+.cookie {
+    background-color: #181818;
+}
+
+.cookie p {
+    margin: 5px;
+    font-weight: 700;
+    margin: 5px 10px 12px 10px;
+    background-color: #181818;
+}
+
+.cookie:hover {
+    text-decoration: underline;
+}
+.lang{
+    background-color: #181818;
+}
+.lang button{
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 32px;
+    width: 99px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #282828;
+}
+
+.lang button:hover{
+    transform: scale(1.1);
+}
