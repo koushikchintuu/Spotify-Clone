@@ -143,6 +143,7 @@ body {
     background-color: #181818;
 
 }
+
 .lib-options {
     display: flex;
     align-items: center;
@@ -189,21 +190,6 @@ body {
     opacity: 1;
 }
 
-
-/* Bottom Bar Styling */
-.bottombar {
-    grid-area: bottombar;
-    background-color: #1f1f1f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #282828;
-}
-
-.bottombar p {
-    color: #b3b3b3;
-}
-
 .box {
     background-color: #232323;
     /* Dark background */
@@ -228,6 +214,22 @@ body {
     color: #ccc;
     background-color: #232323;
 }
+
+
+/* Bottom Bar Styling */
+.bottombar {
+    grid-area: bottombar;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #282828;
+}
+
+.bottombar p {
+    color: #b3b3b3;
+}
+
 
 .badge {
     background-color: #fff;
@@ -397,7 +399,7 @@ h2 {
 .knowmore {
     margin: 4rem 0;
     display: flex;
-    
+
     justify-content: space-around;
     background-color: #282828;
 }
@@ -516,10 +518,12 @@ h2 {
 .cookie:hover {
     text-decoration: underline;
 }
-.lang{
+
+.lang {
     background-color: #181818;
 }
-.lang button{
+
+.lang button {
     border: 2px solid white;
     border-radius: 20px;
     height: 32px;
@@ -529,6 +533,116 @@ h2 {
     background-color: #282828;
 }
 
-.lang button:hover{
+.lang button:hover {
     transform: scale(1.1);
 }
+
+/* Default Styles for Desktop (already applied above) */
+
+/* Media Queries for Responsiveness */
+
+/* For large tablets and small desktops (e.g., 1024px and smaller) */
+@media (max-width: 1024px) {
+
+    .search {
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-areas:
+            "topbar topbar"
+            "sidebar maincontent"
+            "bottombar bottombar";
+    }
+
+    .sidebar {
+        width: 16rem;
+    }
+
+    .maincontent {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .topcenter {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .search {
+        position: relative;
+    }
+    
+    .sidebar {
+        width: 10rem;
+    }
+    .search input {
+        width: 200px;
+        padding: 0px;
+        align-self: center;
+    }
+
+    .grid-container {
+        grid-template-areas:
+            "topbar topbar"
+            "sidebar maincontent"
+            "bottombar bottombar";
+    }
+
+    .maincontent {
+        width: 100%;
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .topbar{
+        width: 100%;
+    }
+    .search input {
+        width: 150px;
+    }
+
+    .search i {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #ccc;
+    }
+
+    .grid-container {
+        grid-template-areas:
+            "topbar topbar"
+            "sidebar maincontent"
+            "bottombar bottombar";
+    }
+
+    .maincontent {
+        width: 100%;
+        height: 100vh;
+    }
+    .box1 {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        background-color: #232323;
+    }
+    
+    .box2 {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        color: #ccc;
+        background-color: #232323;
+    }
+}
+
+
+@only screen and (min-width: 768px) @only screen and (min-width: 992px) @only screen and (min-width: 1280px)
