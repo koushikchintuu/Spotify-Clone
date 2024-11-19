@@ -258,7 +258,7 @@ body {
     overflow-y: scroll;
 }
 
-/* Webkit scrollbar customization */
+/* Webkit scrollbar */
 .maincontent::-webkit-scrollbar {
     width: 15px;
     height: 6px;
@@ -274,7 +274,25 @@ body {
     border: 2px solid #333;
 }
 
-.maincontent::-webkit-scrollbar-thumb:hover {
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    height: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
 
